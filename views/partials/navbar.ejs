@@ -1,0 +1,25 @@
+<nav>
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li><a href="/">Home</a></li>
+        <li><a href="/beers">Beer Shelf</a></li>
+        <% if(locals.isAuthenticated) { %>
+          <li>
+            <a href="/beers/new">Add Beer</a>
+            </li>
+          <li >
+            <a href="/logout">Logout</a>
+          </li>
+        <% } else { %>
+          <li >
+            <a href="/login">Log In</a>
+          </li>
+          <li >
+            <a href="/register">Register</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -7,13 +7,14 @@ const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 const routes = require('./config/routes');
 const session = require('express-session');
-const flash = require('express-flash');
+const flash = require('express-flash'); // use after session, not before, or won't work
+// const User = require('./models/user');
 const customResponses = require('./lib/customResponses');
 const userSession = require('./lib/userSession');
 
 const { port, env, dbURI } = require('./config/environment');
 
-const app = express;
+const app = express();
 app.set('view engine', 'ejs');
 app.set('views', `${__dirname}/views`);
 
@@ -34,9 +35,9 @@ app.use(methodOverride(function (req) {
 }));
 
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'tell no-one your secret',
+  secret: process.env.SESSION_SECRET || 'shh it\'s a secret',
   resave: false,
-  saveUninitalized: false
+  saveUninitialized: false
 }));
 
 app.use(flash());

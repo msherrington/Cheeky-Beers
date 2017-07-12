@@ -3,8 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Cheeky Beers</title>
+    <% include ./partials/stylesheets %>
   </head>
   <body>
+    <% include ./partials/navbar %>
+    <main class="container">
+      <% for(const type in messages) { %>
+        <p class="flash <%= type %>"><%= messages[type] %></p>
+      <% } %>
+      <%- body %>
+    </main>
 
   </body>
 </html>
