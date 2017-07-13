@@ -1,0 +1,15 @@
+
+<div class="small-12 columns centered">
+  <img src="<%= beer.image %>">
+  <h3><%= beer.name %></h3>
+  <h4><%= beer.brand %></h4>
+  <h5><%= beer.style %>, <%= beer.percentage %>%</h5>
+  <p><%= beer.description %></p>
+  <% if(locals.isAuthenticated) { %>
+    <a href="/beers/<%= beer.id %>/edit" class="button">Edit</a>
+    <form action="/beers/<%= beer.id %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE"/>
+      <button class="button">Delete</button>
+    </form>
+  <% } %>
+</div>

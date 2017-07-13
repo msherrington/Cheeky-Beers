@@ -1,0 +1,38 @@
+<div class="center">
+  <h1>Add a new beer</h1>
+
+  <form method="POST" action="/beers" class="form-width">
+
+    <div>
+      <label for="name">Beer Name</label>
+      <input type="text" name="name" id="name" placeholder="e.g. Punk IPA">
+    </div>
+
+    <div>
+      <label for="brand">Brewery</label>
+      <input type="text" name="brand" id="brand" placeholder="e.g. BrewDog">
+    </div>
+
+    <div>
+      <label for="style">Beer Style</label>
+      <input type="text" name="style" id="style" placeholder="e.g. IPA">
+    </div>
+
+    <div>
+      <label for="percentage">Percentage</label>
+      <input type="number" name="percentage" id="percentage">
+    </div>
+
+    <div>
+      <label for="description">Description</label>
+      <textarea name="description"></textarea>
+    </div>
+
+    <div>
+      <label for="image">Image Link</label>
+      <input type="text" name="image" id="image">
+    </div>
+
+    <button class="button">Add this beer!</button>
+  </form>
+</div>

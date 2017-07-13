@@ -1,0 +1,39 @@
+<div class="centered">
+  <h1>Edit beer details</h1>
+
+  <form method="POST" action="/beers/<%= beer.id %>" class="small-12 medium-6 large-4 columns">
+    <input type="hidden" name="_method" value="PUT">
+
+    <div>
+      <label for="name">Beer Name</label>
+      <input type="text" name="name" id="name"  value="<%= beer.name %>">
+    </div>
+
+    <div>
+      <label for="brand">Brewery</label>
+      <input type="text" name="brand" id="brand"  value="<%= beer.brand %>">
+    </div>
+
+    <div>
+      <label for="style">Beer Style</label>
+      <input type="text" name="style" id="style"  value="<%= beer.style %>">
+    </div>
+
+    <div>
+      <label for="percentage">Percentage</label>
+      <input type="number" name="percentage" id="percentage" value="<%= beer.percentage %>">
+    </div>
+
+    <div>
+      <label for="description">Description</label>
+      <textarea name="description"><%= beer.description %></textarea>
+    </div>
+
+    <div>
+      <label for="image">Image Link</label>
+      <input type="text" name="image" id="image" value="<%= beer.image %>">
+    </div>
+
+    <button class="button">Update</button>
+  </form>
+</div>
