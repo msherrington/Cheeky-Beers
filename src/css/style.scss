@@ -40,7 +40,6 @@ div.home {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../assets/images/beer-wall.jpg');
   position: relative;
-  // margin-top: -50px;
   background-position: center;
   background-size: cover;
   color: $white;
@@ -61,8 +60,12 @@ div.home {
   }
 }
 
-.center {
-  @extend .centered;
+.showbox {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 label {
@@ -98,7 +101,11 @@ p.flash {
   }
 }
 
-.beer:nth-child(4, 8, 12) {
-  clear: left;
-  margin-left: 0;
-}
+// .beer:nth-child(4, 8, 12) {
+//   clear: left;
+//   margin-left: 0;
+// }
+
+// .beer {
+//   height: 90vh;
+// }

@@ -14,8 +14,8 @@ User
   .create([{
     username: 'Mark',
     email: 'look@me.com',
-    password: 'password',
-    passwordConfirmation: 'password'
+    password: 'pw',
+    passwordConfirmation: 'pw'
   }])
   .then((users) => {
     console.log(`${users.length} users created!`);
