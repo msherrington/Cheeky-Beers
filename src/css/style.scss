@@ -1,0 +1,103 @@
+$white: #fff;
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  background-color: #2a2a2a;
+  color: $white;
+}
+
+.centered {
+  text-align: center;
+}
+
+.top-bar {
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: 'Slackey', cursive;
+  ul {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    li {
+      font-size: 18px;
+      a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: $white;
+      }
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Slackey', cursive;
+}
+
+h1 {
+  text-shadow: 3px 3px grey;
+}
+
+div.home {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://img1.etsystatic.com/039/0/7791216/il_fullxfull.654270909_gysg.jpg');
+  position: relative;
+  // margin-top: -50px;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  h1 {
+    font-size: 50px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .middle {
+    position: absolute;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.85);
+    border-radius: 10px;
+  }
+}
+
+.center {
+  @extend .centered;
+}
+
+label {
+  font-family: inherit;
+  font-size: 16px;
+  color: $white;
+}
+
+.form-width {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.button {
+  border-radius: 5px;
+}
+
+p.flash {
+  width: 50%;
+  margin: 0 auto;
+  @extend .centered;
+  &.success {
+    color: navy;
+    background-color: lightblue;
+    text-shadow: 1px 1px white;
+    border: 2px solid white;
+  }
+  &.danger {
+    color: red;
+    background-color: pink;
+    text-shadow: 1px 1px white;
+    border: 2px solid white;
+  }
+}
+
+.beer:nth-child(4, 8, 12) {
+  clear: left;
+  margin-left: 0;
+}
