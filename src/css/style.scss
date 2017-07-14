@@ -118,3 +118,37 @@ p.flash {
 .beer {
   max-width: 100%;
 }
+
+
+// @media only screen and (min-width: 768px) {
+//     /* tablets and desktop */
+// }
+//
+// @media only screen and (max-width: 767px) {
+//     /* phones */
+// }
+//
+// @media only screen and (max-width: 767px) and (orientation: portrait) {
+//     /* portrait phones */
+// }
+
+
+// Tablets
+@media only screen and (max-width: 768px) {
+  .top-bar {
+    ul {
+      padding-left: 20px;
+      padding-right: 20px;
+      li {
+        font-size: 36px;
+        a {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+
+// Phones
+@media only screen and (max-width: 575px) {
+}
