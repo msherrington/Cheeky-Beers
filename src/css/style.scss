@@ -11,8 +11,13 @@ body {
   text-align: center;
 }
 
+// Overwrites Bootstrap styling
+// .center {
+//   @extend .centered;
+// }
+
+// Navbar styling
 .top-bar {
-  overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.7);
   font-family: 'Slackey', cursive;
   ul {
@@ -36,6 +41,7 @@ h1 {
   text-shadow: 3px 3px grey;
 }
 
+// Title box on welcome page
 div.home {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../assets/images/beer-wall.jpg');
@@ -60,6 +66,7 @@ div.home {
   }
 }
 
+// Container div for individual beer show page
 .showbox {
   margin: 0;
   position: absolute;
@@ -79,10 +86,12 @@ label {
   margin: 0 auto;
 }
 
+// Edit and delete buttons
 .button {
   border-radius: 5px;
 }
 
+// Login flash messages
 p.flash {
   width: 50%;
   margin: 0 auto;
@@ -106,6 +115,6 @@ p.flash {
 //   margin-left: 0;
 // }
 
-// .beer {
-//   height: 90vh;
-// }
+.beer {
+  max-width: 100%;
+}
