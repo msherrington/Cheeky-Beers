@@ -41,9 +41,9 @@ h1 {
   text-shadow: 3px 3px grey;
 }
 
-// Title box on welcome page
+// Welcome page
 div.home {
-  height: 100vh;
+  height: 95vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../assets/images/beer-wall.jpg');
   position: relative;
   background-position: center;
@@ -61,7 +61,7 @@ div.home {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.6);
     border-radius: 10px;
   }
 }
@@ -81,9 +81,14 @@ label {
   color: $white;
 }
 
+// Form styling
 .form-width {
   width: 50%;
   margin: 0 auto;
+  margin-top: 8%;
+  .button {
+    margin-top: 2%;
+  }
 }
 
 // Edit and delete buttons
@@ -132,23 +137,66 @@ p.flash {
 //     /* portrait phones */
 // }
 
+// Landscape Tablets
+@media only screen and (max-width: 1024px) {
+  // Form styling
+  .form-width {
+    width: 60%;
+  }
+  div.home {
+    .middle {
+      padding: 40px 20px 30px;
+    }
+  }
+}
 
 // Tablets
 @media only screen and (max-width: 768px) {
+  // Navbar
   .top-bar {
     ul {
       padding-left: 20px;
       padding-right: 20px;
       li {
-        font-size: 36px;
-        a {
-          font-size: 36px;
-        }
+        font-size: 20px;
       }
     }
   }
+  // Welcome page
+  div.home {
+    h1 {
+      font-size: 5em;
+    }
+    p {
+      font-size: 25px;
+    }
+    .middle {
+      padding: 40px 60px 30px;
+    }
+  }
+  // Form styling
+  .form-width {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 8%;
+    .button {
+      margin-top: 2%;
+    }
+  }
 }
-
-// Phones
-@media only screen and (max-width: 575px) {
-}
+//
+// // Phones
+// @media only screen and (max-width: 575px) {
+//   .top-bar {
+//     ul {
+//       padding-left: 20px;
+//       padding-right: 20px;
+//       li {
+//         font-size: 36px;
+//         a {
+//           font-size: 36px;
+//         }
+//       }
+//     }
+//   }
+// }
